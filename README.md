@@ -67,6 +67,23 @@ Para testar o build localmente:
 npm run preview
 ```
 
+## Testes
+
+O projeto usa **Vitest** + **Testing Library** + **jest-dom** para testes de unidade e de componente. Cada `Componente.jsx` tem um `Componente.test.jsx` ao lado, e o mesmo padrão vale para arquivos `.js`.
+
+```bash
+# Rodar a suíte uma vez (use antes de cada commit)
+npm run test
+
+# Rodar em modo watch durante o desenvolvimento
+npm run test:watch
+```
+
+Configuração:
+
+- `vite.config.js` → bloco `test` (jsdom, globals, setup file)
+- `src/test/setup.js` → registra os matchers do `@testing-library/jest-dom` e limpa o DOM entre testes
+
 ## Deploy no Netlify
 
 A forma mais simples é conectar o repositório do GitHub ao Netlify:
@@ -98,6 +115,8 @@ camila-portfolio-react/
 │   │   └── Footer.jsx
 │   ├── data/
 │   │   └── portfolio.js # ← Edite aqui o conteúdo
+│   ├── test/
+│   │   └── setup.js     # Setup do Vitest (jest-dom + cleanup)
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css        # Estilos globais e camada de components Tailwind
@@ -114,5 +133,4 @@ camila-portfolio-react/
 - Implementar dark/light mode toggle
 - Adicionar animações de entrada com Framer Motion
 - Incluir formulário de contato funcional (Formspree, EmailJS ou Netlify Forms)
-- Adicionar testes com Vitest + Testing Library
 - Configurar SEO mais detalhado e Open Graph tags

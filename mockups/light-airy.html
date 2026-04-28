@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camila Ferreira — Mockup (Light & Airy)</title>
+
+    <!-- Tailwind via CDN só para o mockup. No projeto real continua via build. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tipografia: Inter (sans) + JetBrains Mono (mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Customização da paleta light & airy direto no mockup.
+      // No projeto real isso vai pra tailwind.config.js.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: '#fafafa',
+              surface: '#ffffff',
+              ink: '#0a0a0a',
+              muted: '#737373',
+              border: '#e5e5e5',
+              accent: '#2563eb',
+              'accent-hover': '#1d4ed8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            letterSpacing: {
+              tighter2: '-0.04em',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-feature-settings: 'cv11', 'ss01', 'ss03';
+      }
+    </style>
+  </head>
+
+  <body class="bg-bg font-sans text-ink antialiased">
+    <!-- ============== NAVBAR ============== -->
+    <header
+      class="sticky top-0 z-40 border-b border-border/60 bg-bg/80 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10"
+      >
+        <a
+          href="#top"
+          class="font-mono text-sm font-medium tracking-tight text-ink"
+        >
+          camila ferreira
+        </a>
+
+        <ul class="hidden items-center gap-10 md:flex">
+          <li>
+            <a
+              href="#about"
+              class="font-mono text-sm text-muted transition-colors hover:text-ink"
+            >
+              about
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="font-mono text-sm text-muted transition-colors hover:text-ink"
+            >
+              skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="font-mono text-sm text-muted transition-colors hover:text-ink"
+            >
+              projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="font-mono text-sm text-muted transition-colors hover:text-ink"
+            >
+              contact
+            </a>
+          </li>
+        </ul>
+
+        <a
+          href="#contact"
+          class="hidden rounded-full border border-ink px-4 py-2 font-mono text-xs font-medium text-ink transition-colors hover:bg-ink hover:text-bg md:inline-block"
+        >
+          get in touch
+        </a>
+      </nav>
+    </header>
+
+    <main id="top" class="mx-auto max-w-6xl px-6 md:px-10">
+      <!-- ============== HERO ============== -->
+      <section class="flex min-h-[85vh] flex-col justify-center py-24">
+        <p class="mb-8 font-mono text-sm text-muted">
+          <span class="mr-2 inline-block h-1.5 w-1.5 translate-y-[-2px] rounded-full bg-accent"></span>
+          Available for new opportunities
+        </p>
+
+        <h1
+          class="text-5xl font-bold tracking-tighter2 text-ink sm:text-6xl md:text-8xl"
+        >
+          Camila Ferreira
+        </h1>
+
+        <p
+          class="mt-6 max-w-2xl text-2xl font-medium tracking-tight text-muted md:text-3xl"
+        >
+          Frontend developer building things for the web from
+          <span class="text-ink">Valencia, Spain</span>.
+        </p>
+
+        <p class="mt-10 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+          A decade of experience at the intersection of technology and venture
+          capital. Now crafting interfaces with care, code, and a bit of
+          curiosity.
+        </p>
+
+        <div class="mt-12 flex flex-wrap items-center gap-6">
+          <a
+            href="#projects"
+            class="rounded-full bg-ink px-6 py-3 font-mono text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
+          >
+            View projects →
+          </a>
+          <a
+            href="#contact"
+            class="font-mono text-sm text-ink underline decoration-muted decoration-1 underline-offset-4 transition-colors hover:decoration-accent"
+          >
+            Or just say hi
+          </a>
+        </div>
+      </section>
+
+      <!-- ============== ABOUT ============== -->
+      <section id="about" class="border-t border-border py-32">
+        <div class="grid gap-16 md:grid-cols-12">
+          <div class="md:col-span-4">
+            <p class="font-mono text-xs uppercase tracking-widest text-muted">
+              01 — About
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tighter2 md:text-4xl"
+            >
+              A bit about me
+            </h2>
+          </div>
+
+          <div class="md:col-span-5 md:col-start-6">
+            <div class="space-y-5 text-base leading-relaxed text-muted">
+              <p>
+                I currently reside in Valencia, Spain. I hold a degree in
+                chemical engineering. My innate inclination towards exploration
+                has led me to delve into various fields — from software
+                development to psychology.
+              </p>
+              <p>
+                My professional journey started in industries like Solvay and
+                3M. A significant part of my career was forged in the tech
+                sphere, taking on roles in Marketing, Product, and Growth.
+              </p>
+              <p>
+                Today, I write code with the same curiosity that brought me
+                here.
+              </p>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 md:col-start-10">
+            <div class="aspect-[3/4] w-full overflow-hidden rounded bg-border">
+              <!-- Placeholder visual neutro: substitua pela foto real /images/5.png -->
+              <div
+                class="flex h-full w-full items-center justify-center bg-gradient-to-br from-neutral-200 to-neutral-300 font-mono text-xs text-muted"
+              >
+                photo
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== SKILLS ============== -->
+      <section id="skills" class="border-t border-border py-32">
+        <div class="grid gap-16 md:grid-cols-12">
+          <div class="md:col-span-4">
+            <p class="font-mono text-xs uppercase tracking-widest text-muted">
+              02 — Skills
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tighter2 md:text-4xl"
+            >
+              What I work with
+            </h2>
+          </div>
+
+          <div class="md:col-span-8">
+            <ul class="flex flex-wrap gap-2">
+              <!-- prettier-ignore -->
+              <template id="skills-template"></template>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">JavaScript (ES6+)</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">React</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">HTML5</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">CSS3</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">Tailwind CSS</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">Bootstrap</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">Git &amp; GitHub</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">REST APIs</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">Responsive Design</li>
+              <li class="rounded-full border border-border bg-surface px-4 py-2 font-mono text-sm text-ink">Netlify</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== PROJECTS ============== -->
+      <section id="projects" class="border-t border-border py-32">
+        <div class="mb-16 grid gap-16 md:grid-cols-12">
+          <div class="md:col-span-4">
+            <p class="font-mono text-xs uppercase tracking-widest text-muted">
+              03 — Selected work
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tighter2 md:text-4xl"
+            >
+              Projects
+            </h2>
+          </div>
+          <p class="text-base leading-relaxed text-muted md:col-span-5 md:col-start-6">
+            A small selection of things I've shipped while learning. Each one
+            taught me something — usually about how much I still have to learn.
+          </p>
+        </div>
+
+        <div class="space-y-px">
+          <!-- Project row 1 -->
+          <article
+            class="group grid gap-6 border-t border-border py-10 transition-colors md:grid-cols-12 md:gap-8 md:py-12 hover:bg-surface"
+          >
+            <p class="font-mono text-sm text-muted md:col-span-1">01</p>
+            <div class="md:col-span-4">
+              <h3 class="text-2xl font-semibold tracking-tight">Weather App</h3>
+              <p class="mt-2 font-mono text-xs text-muted">
+                JavaScript · HTML · CSS · Weather API
+              </p>
+            </div>
+            <p class="text-base leading-relaxed text-muted md:col-span-5">
+              A simple web application that lets users search for current
+              weather conditions in cities around the globe. Built with
+              JavaScript and a real-time weather API.
+            </p>
+            <div class="flex items-start justify-end gap-4 md:col-span-2">
+              <a
+                href="#"
+                class="font-mono text-sm text-ink underline decoration-muted decoration-1 underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                Live ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project row 2 -->
+          <article
+            class="group grid gap-6 border-t border-border py-10 transition-colors md:grid-cols-12 md:gap-8 md:py-12 hover:bg-surface"
+          >
+            <p class="font-mono text-sm text-muted md:col-span-1">02</p>
+            <div class="md:col-span-4">
+              <h3 class="text-2xl font-semibold tracking-tight">
+                Time Zone App
+              </h3>
+              <p class="mt-2 font-mono text-xs text-muted">
+                JavaScript · HTML · CSS
+              </p>
+            </div>
+            <p class="text-base leading-relaxed text-muted md:col-span-5">
+              Displays the current time in major cities around the world. Clean
+              and responsive interface, focused on doing one thing well.
+            </p>
+            <div class="flex items-start justify-end gap-4 md:col-span-2">
+              <a
+                href="#"
+                class="font-mono text-sm text-ink underline decoration-muted decoration-1 underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                Live ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project row 3 -->
+          <article
+            class="group grid gap-6 border-t border-border py-10 transition-colors md:grid-cols-12 md:gap-8 md:py-12 hover:bg-surface"
+          >
+            <p class="font-mono text-sm text-muted md:col-span-1">03</p>
+            <div class="md:col-span-4">
+              <h3 class="text-2xl font-semibold tracking-tight">
+                Inspiring Quotes (AI)
+              </h3>
+              <p class="mt-2 font-mono text-xs text-muted">
+                JavaScript · AI API · HTML · CSS
+              </p>
+            </div>
+            <p class="text-base leading-relaxed text-muted md:col-span-5">
+              An app that talks to an AI API: users send a prompt and instantly
+              receive curated quotes tailored to their topic.
+            </p>
+            <div class="flex items-start justify-end gap-4 md:col-span-2">
+              <a
+                href="#"
+                class="font-mono text-sm text-ink underline decoration-muted decoration-1 underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                Live ↗
+              </a>
+            </div>
+          </article>
+
+          <div class="border-t border-border"></div>
+        </div>
+      </section>
+
+      <!-- ============== CONTACT ============== -->
+      <section
+        id="contact"
+        class="border-t border-border py-40 text-center"
+      >
+        <p class="font-mono text-xs uppercase tracking-widest text-muted">
+          04 — Contact
+        </p>
+        <h2
+          class="mx-auto mt-6 max-w-3xl text-4xl font-bold tracking-tighter2 md:text-6xl"
+        >
+          Let's build something good together.
+        </h2>
+        <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted">
+          I'm currently open to new opportunities. My inbox is always open —
+          send a message and I'll get back to you.
+        </p>
+        <a
+          href="mailto:pferreiracamila@gmail.com"
+          class="mt-10 inline-block rounded-full bg-ink px-8 py-4 font-mono text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
+        >
+          pferreiracamila@gmail.com →
+        </a>
+
+        <div class="mt-12 flex items-center justify-center gap-6 font-mono text-sm text-muted">
+          <a href="#" class="transition-colors hover:text-ink">GitHub</a>
+          <span class="text-border">·</span>
+          <a href="#" class="transition-colors hover:text-ink">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="border-t border-border">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 font-mono text-xs text-muted md:flex-row md:px-10"
+      >
+        <p>© 2026 Camila Ferreira</p>
+        <p>Built with React + Vite + Tailwind</p>
+      </div>
+    </footer>
+  </body>
+</html>
